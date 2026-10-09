@@ -1,0 +1,120 @@
+.carousel {
+  position: relative;
+}
+
+.carousel .carousel-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel .carousel-track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 0.4s ease;
+}
+
+.carousel .carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.carousel .carousel-slide-image {
+  position: absolute;
+  inset: 0;
+  line-height: 0;
+}
+
+.carousel .carousel-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .carousel-slide-content {
+  position: relative;
+  margin: 24px;
+  padding: 24px;
+  max-width: 520px;
+  background: rgb(19 19 19 / 75%);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.carousel .carousel-slide-content :is(h1, h2, h3, p) {
+  margin: 0 0 8px;
+  color: inherit;
+}
+
+.carousel .carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.carousel .carousel-controls button {
+  margin: 0;
+  border: 2px solid var(--dark-color);
+  background: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.carousel .carousel-prev,
+.carousel .carousel-next {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.carousel .carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel .carousel-dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.carousel .carousel-dot[aria-current='true'] {
+  background: var(--link-color);
+  border-color: var(--link-color);
+}
+
+.carousel button:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.carousel .carousel-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel .carousel-track {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel .carousel-slide {
+    min-height: 480px;
+  }
+}

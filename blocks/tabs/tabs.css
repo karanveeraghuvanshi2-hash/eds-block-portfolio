@@ -1,0 +1,39 @@
+.tabs .tabs-list {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--light-color);
+}
+
+.tabs .tabs-tab {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 12px 20px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background: none;
+  color: var(--dark-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs .tabs-tab[aria-selected='true'] {
+  color: var(--text-color);
+  border-bottom-color: var(--link-color);
+}
+
+.tabs .tabs-tab:hover {
+  color: var(--text-color);
+}
+
+.tabs .tabs-panel {
+  padding: 24px 0;
+}
+
+.tabs .tabs-tab:focus-visible,
+.tabs .tabs-panel:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 2px;
+}
