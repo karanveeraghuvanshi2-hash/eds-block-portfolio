@@ -12,7 +12,7 @@ So every block here is just: **read rows → build accessible markup → attach 
 ## Carousel (`blocks/carousel/carousel.js`)
 
 - **Input:** one row per slide; column 1 image, column 2 text.
-- **Output:** a `<ul>` track of `<li>` slides inside a viewport with `overflow: hidden`. Moving between slides sets `transform: translateX(-N * 100%)` on the track.
+- **Output:** a `<div>` track of slide `<div>`s (not a list: `role="group"` on an `<li>` would break list semantics, which Lighthouse flags) inside a viewport with `overflow: hidden`. Moving between slides sets `transform: translateX(-N * 100%)` on the track.
 - **Images:** `createOptimizedPicture` (from `aem.js`) creates responsive WebP sources. Only the first slide's image is eager-loaded; the rest are lazy, which protects LCP.
 - **Accessibility:**
   - The block is a `region` with `aria-roledescription="carousel"`; each slide is a `group` with `aria-roledescription="slide"` and a "1 of 3" label (WAI-ARIA APG carousel pattern).

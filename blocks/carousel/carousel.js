@@ -39,11 +39,11 @@ export default function decorate(block) {
   block.setAttribute('aria-label', block.dataset.label || 'Featured content');
   block.id = block.id || `carousel-${carouselId}`;
 
-  const track = document.createElement('ul');
+  const track = document.createElement('div');
   track.className = 'carousel-track';
 
   rows.forEach((row, i) => {
-    const slide = document.createElement('li');
+    const slide = document.createElement('div');
     slide.className = 'carousel-slide';
     slide.setAttribute('role', 'group');
     slide.setAttribute('aria-roledescription', 'slide');
