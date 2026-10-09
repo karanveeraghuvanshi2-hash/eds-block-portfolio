@@ -2,7 +2,7 @@
 
 Accessible, performance-first blocks for **Adobe Experience Manager Edge Delivery Services**, built on Adobe's [aem-boilerplate](https://github.com/adobe/aem-boilerplate).
 
-**Live demo:** `https://main--eds-block-portfolio--karanveeraghuvanshi2-hash.aem.page/demo` *(goes live once the demo page is published)*
+**Live demo:** https://main--eds-block-portfolio--karanveeraghuvanshi2-hash.aem.live/
 
 | Block | What it does | Accessibility |
 |---|---|---|
